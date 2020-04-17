@@ -5,8 +5,13 @@
     box-sizing: border-box;
 }
 
+body strong {
+    color:#6ab04c;
+
+}
+
 #about {
-    padding: 200px 0;
+    padding: 80px 0;
 }
 
 #about h4 {
@@ -14,16 +19,14 @@
     font-size:20px;
     font-weight: 500;
     
-
 }
 
-#about h4 strong {
-    color:#6ab04c;
-}
 
 .services-section {
     width: 100%;
-    margin:80px 0;
+    margin:100px 0;
+    padding:0 0 100px;
+   
 }
 
 .inner-width {
@@ -34,14 +37,10 @@
 
 .services-section h1 {
     text-align: center;
-    font-size:32px;
     font-weight: 500;
     margin-bottom: 80px;
 }
 
-.services-section h1 strong {
-    color:#6ab04c;
-}
 
 .service {
     text-align:center;
@@ -107,6 +106,16 @@
     padding:10px;
 }
 
+.nav-item a:hover {
+    color:white;
+    -webkit-transition: all 0.2s ease ;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -transition: all 0.2s ease;
+
+}
+
 .nav-link {
     color:black;
     font-weight: 500;
@@ -121,16 +130,95 @@
 	background-size: 100%;
 }
 
-.fa-twitter-square,.fa-github-square {
+.fa-youtube-square,.fa-github-square {
     font-size:40px;
+}
+
+.fa-youtube-square {
+    color:red;
 }
 
 .fa-github-square {
     color: black;
 }
 
-#contact{
+.title {
+    width: 100%;
+    text-align: center;
+    padding:10px 0 0;
+    font-size:32px;
+    font-weight: 500;
+    margin-bottom: 80px;
+}
+
+
+.tab {
+    width:100%;
+    text-align: center;
     
+}
+.tabs li {
+    
+    cursor: pointer;
+    display: inline;
+    margin:0 5px;
+    padding:15px;
+    border-radius: 10px;
+    border-width: 1px;
+    color: #6ab04c;
+    font-weight: 700;
+    background-color:white;
+    letter-spacing: 2px;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -transition: all 0.1s ease;
+}
+
+.tabs li:hover {
+    background-color: #6ab04c;
+    color:white;
+}
+
+.listContainer {
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+.box_wrap {
+    width:100%;
+    position: relative;
+}
+
+.box_wrap li {
+
+    margin-bottom: 30px;
+    padding:20px 5px 0;
+    float:left;
+    list-style: none;
+}
+
+.tabs .active {
+    background-color: #6ab04c;
+    color:white;
+}
+
+
+.list img {
+    width:100%;
+	-webkit-transition: all 0.2s linear, 1s;
+    -moz-transition: all 0.2s linear, 1s;
+    -o-transition: all 0.2s linear, 1s;
+    -ms-transition: all 0.2s linear, 1s;
+    -transition: all 0.2s linear, 1s; 
+    margin:0;
+    padding:0; 
+}
+
+
+#contact{
     padding:100px 0;
     text-align: center;
 

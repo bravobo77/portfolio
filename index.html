@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="./css/superslides.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="./js/index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script src="./js/jquery.superslides.js"></script>
     <script src="./js/jquery.superslides.min.js"></script>
   </head>
@@ -63,12 +64,16 @@
             </div>
             <div class="col-md-7">
               <h4>My name is <strong>BoKyung Kim</strong></h4>
-              <p>おはようございます。わたしはキムボギョンと申します。2017年大学校卒業後、気にいったプログラミングを始めました。
-            今までウェブサイト制作やアプ制作するようにHTML/CSS/JAVASCRIPT/PHP/で可能です。挑戦を好き！いつも新しい言語に挑戦しています。
+              <p>
+                おはようございます。私はキムボギョンと申します。
+                2017年大学校卒業後、関心があるプログラミングを始めました。 
+                今までウェブサイト制作やアプ制作をできるようにHTML/CSS/JAVASCRIPT/PHP/を学習しています。
+                挑戦を好き！いつも新しい言語に挑戦しています。
               </p>
-              <p>Studied about Maritime law and graduated Korea Maritime &amp; Ocean University In 2017. Studying about
-                HTML/CSS/JavaScript/python(and more) to be a Front-end Engineer.</p>
-                  <span class="twitter"><a href=""><i class="fab fa-twitter-square"></i></a></span>
+              <p>
+                Studied about Maritime law and graduated Korea Maritime &amp; Ocean University In 2017. 
+                Studying about HTML/CSS/JavaScript/python(and more) to be a Front-end Engineer.</p>
+                  <span class="youtube"><a href=""><i class="fab fa-youtube-square"></i></a></span>
                   <span class="github"><a href="https://github.com/bravobo77"><i class="fab fa-github-square lg-2x"></i></a></span>
               </div>
             </div>
@@ -135,17 +140,54 @@
           </div>
         </div>
       </div>
-      <div id="stats" class="container">STATS</div>
-      <div id="portfolio" class="container">PORTFOLIO</div>
+      <div id="portfolio" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="title">
+              <h1>My <strong>Projects</strong></h1>
+            </div>
+            <div class="tab">
+              <ul class="tabs">
+                <li data-filter="*" class="active">ALL</li>
+                <li data-filter=".webApps">WEB APPS</li>
+                <li data-filter=".basics">HTML/CSS</li>
+                <li data-filter=".ppt">PPT</li>
+              </ul>
+            </div>
+            <div class="listContainer">
+              <ul class="box_wrap">
+                <li class="webApps col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                  <div class="list">
+                    <img src="./img/item1.png" alt="portfolio1">
+                  </div>
+                </li>
+                <li onclick class="basics col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                  <div class="list">
+                    <img src="./img/item1.png" alt="portfolio1">
+                  </div>
+                </li>
+                <li onclick class="ppt col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                  <div class="list">
+                    <img src="./img/item1.png" alt="portfolio1">
+                  </div>
+                </li>
+                <li onclick class="ppt col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                  <div class="list">
+                    <img src="./img/item1.png" alt="portfolio1">
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
       <div id="contact" class="container">
-        <h1 class="display-4">contact me</h1>
+        <h1><strong>Contact</strong> Me</h1>
         <div class="row">
           <div class="col-12">
             <table class="table">
-              <tr>
-                <th>name</th>
-                <td>bo kyung kim</td>
-              </tr>
               <tr>
                 <th>email</th>
                 <td><a href="mailto:a95067300.2@gmail.com">a95067300.2@gmail.com</a></td>
@@ -183,6 +225,25 @@
             animation:"slide"
           });
         });
+      </script>
+      <script>
+        $(function(){
+          $(".tabs li").click(function(){
+          $(".tabs li").removeClass("active");
+          $(this).addClass("active");
+
+          var selector = $(this).attr("data-filter");
+          $(".box_wrap").isotope({
+            filter:selector,
+            animationOptions:{
+                duration:750,
+                easing:"linear",
+                queue:false
+              }
+          });
+        return false;
+        });
+      });
       </script>
 </body>
 </html>
