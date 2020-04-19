@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./css/superslides.css">
     <link rel="stylesheet" href="./css/jquery.fancybox.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   </head>
 <body>
-  <!--slide-->
-    <div id="slides">
-      <div class="slides-container" style="width:100%; height:800px; margin:0;">
-        <img src="./img/1.jpg" alt="bannerImg1">
-        <img src="./img/2.jpg" alt="bannerImg2">
-        <img src="./img/3.jpg" alt="bannerImg3">
+    <div id="header" class="section">
+      <div class="cover">
+        <div id="typed-strings">
+          <p>Are you ready to</p>
+        </div>
+        <span id="typed"></span>
       </div>
-    </div> 
-  <!--slide-->
-    <nav class="navbar navbar-expand-md">
+    </div>
+  
+    <nav id="navigation" class="navbar navbar-light navbar-expand-md bg-light">
         <a class="navbar-brand" href="#">BOKYUNG KIM</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" >
           <span class="navbar-toggler-icon"></span>
@@ -34,10 +34,7 @@
                 <a class="nav-link" href="#about">About</a>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="#stats">Stats</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
@@ -129,7 +126,7 @@
           </div>
         </div>
       </div>
-      <div id="portfolio" class="section">
+      <div id="projects" class="section">
         <div class="container">
           <div class="row">
             <div class="title">
@@ -140,7 +137,6 @@
                 <li data-filter="*" class="active">ALL</li>
                 <li data-filter=".webApps">WEB APPS</li>
                 <li data-filter=".basics">HTML/CSS</li>
-                <li data-filter=".design">Design</li>   
               </ul>
             </div>
             <div class="listContainer">
@@ -149,7 +145,7 @@
                   <div class="list">
                     <img src="./img/item1.png" alt="portfolio1">
                     <div class="icons">
-                      <a href="./img/item1.png" class="btn" title="View image" data-fancybox data-caption="Caption for single image">
+                      <a href="./img/item1.png" class="btnBig" title="View image" data-fancybox data-caption="Caption for single image">
                         <i class="fa fa-search"></i>
                       </a>
                       <a href="https://github.com/bravobo77/paintJS" target="_blank" class="projectLink">
@@ -163,7 +159,7 @@
                   <div class="list">
                     <img src="./img/item2.png" alt="portfolio2">
                     <div class="icons">
-                      <a href="./img/item2.png" class="btn" title="View image" data-fancybox data-caption="Caption for single image">
+                      <a href="./img/item2.png" class="btnBig" title="View image" data-fancybox data-caption="Caption for single image">
                         <i class="fa fa-search"></i>
                       </a>
                       <a href="http://github.com/bravobo77" target="_blank" class="projectLink">
@@ -177,7 +173,7 @@
                   <div class="list">
                     <img src="./img/item3.png" alt="portfolio3">
                     <div class="icons">
-                      <a href="./img/item3.png" class="btn" title="View image" data-fancybox data-caption="Caption for single image">
+                      <a href="./img/item3.png" class="btnBig" title="View image" data-fancybox data-caption="Caption for single image">
                         <i class="fa fa-search"></i>
                       </a>
                       <a href="https://github.com/bravobo77/Mementom" target="_blank" class="projectLink">
@@ -187,25 +183,11 @@
                     <div class="imageCover"></div>
                   </div>
                 </li>
-                <li class="design col-xs-6 col-sm-6 col-md-6 col-lg-3">
-                  <div class="list">
-                    <img src="./img/item5.jpg" alt="portfolio1">
-                    <div class="icons">
-                      <a href="./img/item5.jpg" class="btn" title="View image" data-fancybox data-caption="Caption for single image">
-                        <i class="fa fa-search"></i>
-                      </a>
-                      <a href="" target="_blank" class="projectLink">
-                        <i class="fa fa-link"></i>
-                      </a>
-                    </div>
-                    <div class="imageCover"></div>
-                  </div>
-                </li>
                 <li class="basics col-xs-6 col-sm-6 col-md-6 col-lg-3">
                   <div class="list">
-                    <img src="./img/item5.jpg" alt="portfolio1">
+                    <img src="./img/item4.png" alt="portfolio1">
                     <div class="icons">
-                      <a href="./img/item5.jpg" class="btn" title="View image" data-fancybox data-caption="Caption for single image">
+                      <a href="./img/item4.jpg" class="btnBig" title="View image" data-fancybox data-caption="Caption for single image">
                         <i class="fa fa-search"></i>
                       </a>
                       <a href="" target="_blank" class="projectLink">
@@ -226,11 +208,11 @@
         <h1><strong>Contact</strong> Me</h1>
         <div class="row">
           <div class="col-12">
-            <form action="">
-              <input placeholder="Full name" class="form-control">
-              <input style="margin-top:20px" placeholder="Email" class="form-control">
+            <form action="mail.php" method="post">
+              <input placeholder="Full name" class="form-control" name="name">
+              <input style="margin-top:20px" placeholder="Email" class="form-control" name="sent_email">
               <label style="margin-top:20px; padding:30px; color:#6ab04c; font-weight: 700;"> Message </label>
-              <textarea class="form-control"></textarea>
+              <textarea class="form-control" name="message"></textarea>
               <button style="margin-top:20px; background-color:#6ab04c; color:white; border-style: none;" class="btn btn-primary" href="">Send</button>
             </form>
           </div>
@@ -243,9 +225,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
       <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
-      <script src="./js/jquery.superslides.js"></script>
-      <script src="./js/jquery.superslides.min.js"></script>
-
-    <script src="./js/index.js"></script>    
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+      <script src="js/index.js"></script>    
+      <script src="js/typed.min.js"></script> 
+    
 </body>
 </html>

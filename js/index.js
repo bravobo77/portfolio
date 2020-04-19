@@ -1,13 +1,12 @@
 $(document).ready(function(){
 
-    $(function(){
-        $("#slides").superslides({
-          inherit_width_from:".slides-container",
-          inherit_height_from: ".slides-container",
-          play:3000,
-          animation:"slide"
-        });
-    });
+  
+  var typed = new Typed('#typed', {
+    strings: ["MEET ME?", "THEN CHECK" ,"THIS WEBSITE !"],
+    typeSpeed: 30
+  });
+
+  
 
     $(".services").owlCarousel({
         margin:20,
@@ -48,4 +47,23 @@ $(document).ready(function(){
 
     $("[data-fancybox]").fancybox();
 
+    $(".navbar li a").click(function(e) {
+      e.preventDefault();
+  
+      var targetElement = $(this).attr("href");
+      var targetPosition = $(targetElement).offset().top;
+      $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
+  
+    });
+    
+
+    $(window).scroll(function () { 
+      //console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 928) {
+      $("#navigation").addClass("navbar-fixed");
+    }
+    if ($(window).scrollTop() < 928) {
+      $('#navigation').removeClass("navbar-fixed");
+    }
+  });
 });
