@@ -52,18 +52,8 @@ $(document).ready(function(){
   
       var targetElement = $(this).attr("href");
       var targetPosition = $(targetElement).offset().top;
-      $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
+      $("html, body").animate({ scrollTop: targetPosition - 100 }, "slow");
   
     });
-    
-
-    $(window).scroll(function () { 
-      //console.log($(window).scrollTop())
-    if ($(window).scrollTop() > 928) {
-      $("#navigation").addClass("navbar-fixed");
-    }
-    if ($(window).scrollTop() < 928) {
-      $('#navigation').removeClass("navbar-fixed");
-    }
-  });
+  
 });
