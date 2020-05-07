@@ -28,8 +28,8 @@ body strong {
 .cover p, .cover span {
     font-family: 'Anton', cursive;
     color:white;
-    font-size: 100px;
-    padding:176px 0 22px 50px;
+    font-size: 80px;
+    padding:176px 0 22px 100px;
 
 }
 
@@ -331,4 +331,16 @@ body strong {
     margin:0 auto;
     border-style: none;
     border-bottom: solid #6ab04c;
+}
+
+.footer {
+    margin:0;
+    padding:23px 0 10px 0 ;
+    background-color: #6ab04c;
+    width: 100%;
+    text-align: center;
+}
+
+.footer strong {
+    color:white;
 }
